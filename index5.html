@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic List Rendering</title>
+</head>
+<style>
+    .flex{
+        display: flex;
+        justify-content: center;
+
+    }
+    .flex1{
+        display: flex;
+        justify-content: space-around;
+        
+        
+
+    }
+    ul{
+        list-style-type: none;
+    }
+    span{
+        color: rgb(160, 122, 235);
+    }
+    .space{
+        margin-left: 62px;
+    }
+    .k{
+        padding-left: 29px;
+    }
+    .b{
+        margin-left: 22px;
+    }
+    button{
+        height: 38px;
+    width: 117px;
+    margin-top: 18px;
+    border-radius: 10px;
+    background-color: rgb(204, 214, 224);
+    color: rgb(97, 68, 171);
+    }
+    button:hover{
+        background-color: rgb(160, 122, 235);
+    }
+    body{
+        background-color: rgb(255, 255, 255);
+    }
+</style>
+<body>
+  <div id="root"></div>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // Your ItemList component code will go here
+    function App(){
+        return(
+           <>
+           <div className="flex">
+            <h1>The Right Plan for<br /><span >Your Business</span></h1>
+            <p className="space">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam quod in iure vero. Facilits magnam, sed officials commodi labore odit.</p>
+
+           </div>
+           <hr/>
+           <div >
+              <div className="flex1">
+                 <h3>Starter</h3>
+                 <ul >
+                    <li className="k">✅ 1 lorem ipsum</li>
+                    <li className="k">✅ Lorem , ipsum dolor.</li>
+                    <li className="k">✅ Monthly Updates</li>
+                 </ul>
+                 <h2>Free</h2>
+                 <button className="b">Get Started</button>
+
+              </div>
+              <div className="flex1">
+                <h3>Lorem Plus</h3>
+                <ul>
+                    <li>✅ 1 lorem ipsum</li>
+                    <li>✅ Lorem , ipsum dolor.</li>
+                    <li>✅ Monthly Updates</li>
+                 </ul>
+                 <h2>$32.00</h2>
+                 <button>Get Started</button>
+              </div>
+              <div className="flex1">
+                <h3>Lorem Pro</h3>
+                <ul>
+                    <li>✅ 1 lorem ipsum</li>
+                    <li>✅ Lorem , ipsum dolor.</li>
+                    <li>✅ Monthly Updates</li>
+                 </ul>
+                 <h2>$50.00</h2>
+                 <button>Get Started</button>
+              </div>
+           </div>
+             
+           </>
+        );
+    }
+    let r = ReactDOM.createRoot(document.getElementById("root"));
+    r.render(<App />)
+  </script>
+</body>
+</html>
